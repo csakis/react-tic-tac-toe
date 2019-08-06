@@ -1,14 +1,8 @@
 import React, { Component } from "react";
 import Tile from "./Tile";
 import Status from "./Status";
-import { Columns, Row } from "react-bulma-components";
-// function createRow (i) {
-//     [...Array(3)].map((y, j) =>{
-//         return (
-//             <Column key={j+i}> {j} </Column>
-//         );
-// })
-// }
+import { Columns } from "react-bulma-components";
+
 class Board extends Component {
   state = {
     board: [[0, 0, 0], [0, 0, 0], [0, 0, 0]],

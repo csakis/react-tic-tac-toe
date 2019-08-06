@@ -14,12 +14,12 @@ class Status extends Component {
     }
     else if (count %2 === 0) {
         message = <Notification color="danger">
-            <i class="far fa-circle" />'s turn.
+            <i className="far fa-circle" />'s turn.
           </Notification>
     }
      else if (count %2 === 1) {
         message = <Notification color="success">
-            <i class="far fa-times" />'s' turn.
+            <i className="far fa-times" />'s' turn.
           </Notification>;
      }
     return (<div className="column">{message}</div>);
