@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Card, Icon} from 'react-bulma-components'
+import '../../node_modules/@fortawesome/fontawesome-pro/css/all.css'
 
 class Tile extends Component {
     state = {  }
@@ -7,7 +8,7 @@ class Tile extends Component {
         return ( 
             <Card>
                 <Card.Content>
-                    <Icon icon="far fa-camera" />
+                    <Icon className="far fa-camera" />
                 </Card.Content>   
             </Card>
 
