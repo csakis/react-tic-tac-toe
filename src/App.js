@@ -8,7 +8,7 @@ function App() {
     <Container className="has-text-centered">
       <Heading>React Tic Tac Toe</Heading>
       <Columns>
-        <Columns.Column size="one-third" offset="one-third">
+        <Columns.Column size="one-third" offset="one-third" >
           <Board />
         </Columns.Column>
       </Columns>

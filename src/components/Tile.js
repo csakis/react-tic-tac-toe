@@ -6,7 +6,7 @@ import "../../node_modules/@fortawesome/fontawesome-pro/css/all.css";
 class Tile extends Component {
   state = {};
   render() {
-    let icon = "far fa-5x ";
+    let icon = "far fa-4x ";
     switch (this.props.tile) {
       case -1:
         icon += "fa-times has-text-success";
@@ -24,7 +24,7 @@ class Tile extends Component {
 
     return (
       <Card onClick={this.props.setTile}>
-        <Card.Content>
+        <Card.Content className="has-text-centered">
           <span className={icon} />
         </Card.Content>
       </Card>

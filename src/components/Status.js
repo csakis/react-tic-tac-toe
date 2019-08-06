@@ -7,9 +7,18 @@ class Status extends Component {
     let message = <Notification>Hello</Notification>;
     
     const count = this.props.count;
-    if (count >= 9) {
+    const winner = this.props.winner;
+    if (winner === 1) {
+      message = <Notification color="danger">
+      <i className="far fa-circle" /> won the game!! <div><Button  fullwidth color="warning" onClick={this.props.resetGame}>Reset game!</Button></div>
+    </Notification>;
+    } else if (winner === -1) {
+      message = <Notification color="success">
+      <i className="far fa-times" /> won the game!! <div><Button  fullwidth color="warning" onClick={this.props.resetGame}>Reset game!</Button></div>
+    </Notification>;
+    } else if (count >= 9) {
      message = <Notification color="info">
-     It's a tie! <div><Button inverted fullwidth color="info" onClick={this.props.resetGame}>Reset game!</Button></div>
+     It's a tie! <div><Button  fullwidth color="warning" onClick={this.props.resetGame}>Reset game!</Button></div>
    </Notification>;
     }
     else if (count %2 === 0) {
@@ -19,7 +28,7 @@ class Status extends Component {
     }
      else if (count %2 === 1) {
         message = <Notification color="success">
-            <i className="far fa-times" />'s' turn.
+            <i className="far fa-times" />'s turn.
           </Notification>;
      }
     return (<div className="column">{message}</div>);
