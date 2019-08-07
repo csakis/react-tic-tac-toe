@@ -11,7 +11,11 @@ class Board extends Component {
   };
 
   setTile = (i, j) => {
-    if (this.state.count < 9 && this.state.winner === 0) {
+    if (
+      this.state.count < 9 &&
+      this.state.winner === 0 &&
+      this.state.board[i][j] === 0
+    ) {
       this.setState((state, props) => {
         const tempBoard = [...state.board];
         tempBoard[i][j] = state.count % 2 === 0 ? 1 : -1;
